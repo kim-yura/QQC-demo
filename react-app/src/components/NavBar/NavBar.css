@@ -1,0 +1,34 @@
+/* -------------------- NAVBAR -------------------- */
+
+.navbar-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-signup {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-right>button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Sanchez', sans-serif;
+    color: #FAFAFA;
+    font-size: 16px;
+}
+
+.navbar-option {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.navbar-option:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #8a3948;
+}

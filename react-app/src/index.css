@@ -1,0 +1,95 @@
+/* -------------------- SITEWIDE -------------------- */
+
+nav {
+    background-color: #E7687F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #FAFAFA;
+    font-family: 'Sanchez', sans-serif;
+}
+
+body {
+    background: url('https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #272727;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Sanchez', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* -------------------- SITE BODY -------------------- */
+
+.site-body {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+/* -------------------- HOME -------------------- */
+
+.home-section {
+    background-color: #F3F3F3;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px #152b35;
+    text-align: center;
+}
+
+.body-link {
+    color: #E7687F;
+}
+
+.body-link:hover {
+    font-weight: bold;
+}
+
+.divider {
+    border-bottom: 1px solid #919191;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#faq-pic {
+    width: 200px;
+    border-radius: 50%;
+}
+
+#back-to-home {
+    color: #E7687F;
+    font-weight: normal;
+}
+
+#back-to-home:hover {
+    font-weight: bold;
+}

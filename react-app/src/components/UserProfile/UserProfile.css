@@ -1,0 +1,113 @@
+.user-container {
+    background-color: #F3F3F3;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px #152b35;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    column-gap: 36px;
+}
+
+.user-left {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-page-pic {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px #152b35;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile-bio {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: -12px;
+}
+
+#bio-textarea {
+    resize: vertical;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -12px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#profile-edit-button {
+    background-color: transparent;
+    border: none;
+    color: #E7687F;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#profile-edit-button:hover {
+    font-weight: bold;
+}
+
+#profile-submit-cancel {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 24px;
+    margin-top: 8px;
+}
+
+#profile-submit-cancel>button {
+    background-color: transparent;
+    border: none;
+    color: #E7687F;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+#profile-submit-cancel>button:hover {
+    font-weight: bold;
+}
+
+.user-image-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-image-inputs>input {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    width: 164px;
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.user-image-inputs>button {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 4px;
+    font-size: 12px;
+    background-color: #F3F3F3;
+    color: #E7687F;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+.user-image-inputs>button:hover {
+    font-weight: bold;
+}

@@ -1,0 +1,71 @@
+/* -------------------- LOGIN -------------------- */
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - 20px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form>h3 {
+    font-family: 'Sanchez', serif;
+}
+
+.login-form>div {
+    margin-bottom: 12px;
+}
+
+.login-form>div>input {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid #919191;
+}
+
+.login-form>button {
+    margin-top: 4px;
+    background-color: #E7687F;
+    font-family: 'Open Sans', sans-serif;
+    color: #FAFAFA;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 6px;
+}
+
+.login-errors {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #E7687F;
+    width: 100%;
+    margin-top: 36px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #FAFAFA;
+}
+
+/* -------------------- SIGNUP -------------------- */
+
+.signup-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.signup-element>label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
