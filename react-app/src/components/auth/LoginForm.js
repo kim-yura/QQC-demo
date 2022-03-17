@@ -36,7 +36,14 @@ const LoginForm = () => {
 
   if (user) {
     return <Redirect to='/' />;
-  }
+  };
+
+  const handleDemoLogin = async (e) => {
+    e.preventDefault();
+    const demoEmail = 'demo@demo.com';
+    const demoPassword = 'devpassword123';
+    await dispatch(login(demoEmail, demoPassword));
+  };
 
   return (
     <form className='login-form' onSubmit={onLogin}>
@@ -64,6 +71,7 @@ const LoginForm = () => {
         />
       </div>
       <button type='submit'>Login</button>
+      <button onClick={handleDemoLogin}>Demo Login</button>
       {errors.length ?
         <div className='login-errors'>
           {errors.map((error, ind) => (

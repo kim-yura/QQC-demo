@@ -315,9 +315,9 @@ const DiscountDirectory = () => {
                     {discountsArr.length ?
                         discountsArr.map((discount, idx) =>
                             <tr key={idx}>
-                                <td className={user ? 'maker-name-div' : ''}>
+                                <td className={user?.username === 'admin' || user?.username === 'DemoUser' ? 'maker-name-div' : ''}>
                                         {discount.name}
-                                        {(user) ?
+                                        {(user?.username === 'admin' || user?.username === 'DemoUser') ?
                                             <div className='maker-name-div-buttons'>
                                                 <button value={discount.id} onClick={handleEdit}>Edit</button>
                                                 <button value={discount.id} onClick={handleDelete}>Delete</button>

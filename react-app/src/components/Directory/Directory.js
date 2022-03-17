@@ -756,9 +756,9 @@ const Directory = () => {
                         {searchResultsArr.length ?
                             searchResultsArr.map((maker, idx) =>
                                 <tr key={idx}>
-                                    <td className={user ? 'maker-name-div' : ''}>
+                                    <td className={user?.username === 'admin' || user?.username === 'DemoUser' ? 'maker-name-div' : ''}>
                                         {maker.name}
-                                        {(user) ?
+                                        {(user?.username === 'admin' || user?.username === 'DemoUser') ?
                                             <div className='maker-name-div-buttons'>
                                                 <button value={maker.id} onClick={handleEdit}>Edit</button>
                                                 <button value={maker.id} onClick={handleDelete}>Delete</button>

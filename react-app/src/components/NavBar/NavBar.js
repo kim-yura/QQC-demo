@@ -31,10 +31,10 @@ const NavBar = () => {
       </div>
       <div className='navbar-right'>
         {(user) ? <NavLink to={`/users/${user.id}`} className='navbar-option'>Welcome, {user.username}!</NavLink> : ''}
-        {(user?.username === 'admin') ? <div className='logged-in navbar-option'>|</div> : ''}
-        {(user?.username === 'admin') ? <NavLink className='navbar-option' to={`/new`}>Add to Directory</NavLink> : ''}
-        {(user?.username === 'admin') ? <div className='logged-in navbar-option'>|</div> : ''}
-        {(user?.username === 'admin') ? <NavLink className='navbar-option' to={`/discounts/new`}>Add Discount Code</NavLink> : ''}
+        {(user?.username === 'admin' || user?.username === 'DemoUser') ? <div className='logged-in navbar-option'>|</div> : ''}
+        {(user?.username === 'admin' || user?.username === 'DemoUser') ? <NavLink className='navbar-option' to={`/new`}>Add to Directory</NavLink> : ''}
+        {(user?.username === 'admin' || user?.username === 'DemoUser') ? <div className='logged-in navbar-option'>|</div> : ''}
+        {(user?.username === 'admin' || user?.username === 'DemoUser') ? <NavLink className='navbar-option' to={`/discounts/new`}>Add Discount Code</NavLink> : ''}
         {(user) ? <div className='logged-in navbar-option'>|</div> : ''}
         {(user) ? <LogoutButton className='logout-button navbar-option' /> : <LoginSignup className='login-signup' />}
       </div>
