@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
-import { signUp } from '../../store/session';
+import { login, signUp } from '../../store/session';
 
 import './auth.css';
 
@@ -64,7 +64,14 @@ const SignUpForm = () => {
 
   if (user) {
     return <Redirect to='/' />;
-  }
+  };
+
+  const handleDemoLogin = async (e) => {
+    e.preventDefault();
+    const demoEmail = 'demo@demo.com';
+    const demoPassword = 'devpassword123';
+    await dispatch(login(demoEmail, demoPassword));
+  };
 
   return (
     <form className='login-form' onSubmit={onSignUp}>
@@ -114,6 +121,7 @@ const SignUpForm = () => {
         ></input>
       </div>
       <button type='submit'>Sign Up</button>
+      <button onClick={handleDemoLogin}>Demo Login</button>
       {errors.length ?
         <div className='login-errors'>
           {errors.map((error, ind) => (
