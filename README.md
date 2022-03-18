@@ -1,134 +1,68 @@
-# Flask React Project
+# Quiet Queers Craftalong
 
-This is the starter for the Flask React project.
+The Quiet Queers Craftalong, or QQC, is an annual Pride event hosted through my Instagram account, [knitboop](https://www.instagram.com/knitboop/). Started in 2019, this annual event aims to address issues of rainbow-washing and inaccessibility common in typical Pride events by giving Queer crafters an allies a (virtual) place to come together, and support other queer designers and indie dyers. As a disabled Queer maker myself, organizing this event on an annual basis has given me the opportunity to celebrate my identity in a way that brings me joy.
 
-## Getting started
+After completing my coding bootcamp, I decided to use my new-found coding skills to design and create an intuitive database and website to facilitate the event's coordination! In previous years, organization took place in the form of Wix websites, Google Forms, and rogue Excel spreadsheets. By creating this website, I hope to have created a tool that is not only easy for event participants to navigate through, but also can be easily reused for future events.
 
-1. Clone this repository (only this branch)
+[Demo Site](https://qqc-demo.herokuapp.com/)
 
+<br/><br/>
+
+# Technologies Used
+
+The QQC webpage is built on a React / Redux frontend, a Python / Flask backend, and a PostgreSQL database. Additionally, AWS S3 is implemented for image uploads.
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" height=40 />  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" height=40/>  <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"  height=40/>  <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"  height=40/>  <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" height=40/>  <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"  height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height=40/>  <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"  height=40/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height=40 />
+<br/><br/>
+
+# How to Get Started
+
+1. Clone this repository
    ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
+   git clone https://github.com/kim-yura/QQC-demo.git
    ```
 
-2. Install dependencies
+2. Install dependencies in the root directory
 
-      ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
+   ```bash
+   pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
+   ```
 
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
-4. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
+3. `CD` into the `/react-app` directory and install dependencies
 
-5. Get into your pipenv, migrate your database, seed your database, and run your flask app
+   ```bash
+   npm install
+   ```
+
+4. Create a **.env** file based on the example with proper settings for your
+   development environment, including an AWS S3 account for image uploads
+
+5. Setup a PostgreSQL user based on your **.env** file
+
+6. Setup a PostgreSQL database based on your **.env** file
+
+7. Start your shell, migrate your database, seed your database, and run the flask app
 
    ```bash
    pipenv shell
-   ```
-
-   ```bash
    flask db upgrade
-   ```
-
-   ```bash
    flask seed all
-   ```
-
-   ```bash
    flask run
    ```
 
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
-
-***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
+8. In a new terminal, `CD` into `/react-app` and run the React app
 
    ```bash
-   pipenv lock -r > requirements.txt
+   npm start
    ```
+<br></br>
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
-***
+# Features
 
-## Deploy to Heroku
+## Directory (Full CRUD)
+Makers are the heart of QQC! Whether they are pattern designers or indie yarn dyers, participation in this event centers around celebrating their craft. To that end, the Directory tab allows users to easily browse through the various makers who have opted in to participating in this event. For ease of use, all links provided by individual makers are included in their listings.
 
-1. Before you deploy, don't forget to run the following command in order to
-ensure that your production environment has all of your up-to-date
-dependencies. You only have to run this command when you have installed new
-Python packages since your last deployment, but if you aren't sure, it won't
-hurt to run it again.
+Both the Demo user and Admin users have access to add new makers, edit existing makers, and delete existing makers.
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
-
-2. Create a new project on Heroku
-3. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-4. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-5. Run
-
-   ```bash
-   heroku login
-   ```
-
-6. Login to the heroku container registry
-
-   ```bash
-   heroku container:login
-   ```
-
-7. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-8. Push your docker container to heroku from the root directory of your project.
-   (If you are using an M1 mac, follow [these steps below](#for-m1-mac-users) instead, then continue on to step 9.)
-   This will build the Dockerfile and push the image to your heroku container registry.
-
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
-
-9. Release your docker container to heroku
-
-      ```bash
-      heroku container:release web -a {NAME_OF_HEROKU_APP}
-      ```
-
-10. set up your database
-
-      ```bash
-      heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-      heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-      ```
-
-11. Under Settings find "Config Vars" and add any additional/secret .env
-variables.
-
-12. profit
-
-### For M1 Mac users
-
-(Replaces **Step 8**)
-
-1. Build image with linux platform for heroku servers. Replace
-{NAME_OF_HEROKU_APP} with your own tag:
-
-   ```bash=
-   docker buildx build --platform linux/amd64 -t {NAME_OF_HEROKU_APP} .
-   ```
-
-2. Tag your app with the url for your apps registry. Make sure to use the name
-of your Heroku app in the url and tag name:
-
-   ```bash=2
-   docker tag {NAME_OF_HEROKU_APP} registry.heroku.com/{NAME_OF_HEROKU_APP}/web
-   ```
-
-3. Use docker to push the image to the Heroku container registry:
-
-   ```bash=3
-   docker push registry.heroku.com/{NAME_OF_HEROKU_APP}/web
-   ```
+## Directory Search
+The search bar on the left of the Directory page makes it simple for users to filter search results. Users may search for maker names, an inclusive search for yarn, fiber, notions, knitting patterns, crochet patterns, and embroidery pattern, as well as country (as shipping physical goods can sometimes be a limitation). As QQC grows to encompass new and different crafts, I anticipate this search feature to expand as well.
