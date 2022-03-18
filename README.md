@@ -62,7 +62,19 @@ The QQC webpage is built on a React / Redux frontend, a Python / Flask backend, 
 ## Directory (Full CRUD)
 Makers are the heart of QQC! Whether they are pattern designers or indie yarn dyers, participation in this event centers around celebrating their craft. To that end, the Directory tab allows users to easily browse through the various makers who have opted in to participating in this event. For ease of use, all links provided by individual makers are included in their listings.
 
-Both the Demo user and Admin users have access to add new makers, edit existing makers, and delete existing makers.
+Both the Demo and Admin users have access to add new makers, edit existing makers, and delete existing makers.
 
 ## Directory Search
 The search bar on the left of the Directory page makes it simple for users to filter search results. Users may search for maker names, an inclusive search for yarn, fiber, notions, knitting patterns, crochet patterns, and embroidery pattern, as well as country (as shipping physical goods can sometimes be a limitation). As QQC grows to encompass new and different crafts, I anticipate this search feature to expand as well.
+
+## Discount Codes (Full CRUD)
+Sometimes the event has makers, Queer or straight, who want to offer discount codes to make the event more of a success. The Discount Codes tab functions in a similar way to the Directory tab. Both the Demo and Admin users have access to add new discount codes, edit existing discount codes, and delete existing discount codes.
+
+## User Page (Create, Read, Edit)
+User profiles may be created by signing up for an account. Navigating to the user profile allows the session user to change their profile picture, as well as their bio via a textarea field.
+
+While user profiles don't have a ton of utility at the moment, I am currently working on implementing a Groups feature that will render this more useful.
+
+# Future Additions
+
+As alluded to previously, I am working on implementing a Groups feature. This new feature will allow users to browse existing groups, join them, and participate in forum-style chats, complete with image uploads. Since QQC allows for cross-event "double-dipping" of craft projects, groups may facilitate this type of cross-event communication. Additionally, QQC participants may want to find Queer-friendly craft-events near their geographical location. The ability to search for Groups catered towards those events may be helpful for participants.
