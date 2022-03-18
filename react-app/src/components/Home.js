@@ -10,7 +10,7 @@ function Home() {
         <div className='site-body'>
             <div className='home-section'>
                 <h1>
-                    Welcome to the Quiet Queers Craftalong!
+                    Welcome to the DEMO SITE for the Quiet Queers Craftalong!
                 </h1>
                 <h3>
                     June 1, 2022 ~ August 1, 2022
