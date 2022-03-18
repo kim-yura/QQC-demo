@@ -6,7 +6,7 @@ After completing my coding bootcamp, I decided to use my new-found coding skills
 
 [Demo Site](https://qqc-demo.herokuapp.com/)
 
-<br/><br/>
+<br/>
 
 # Technologies Used
 
